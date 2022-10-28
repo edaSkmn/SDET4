@@ -1,4 +1,4 @@
-package Gun04;
+package Gun04_SeleniumBasic;
 
 import Utility.MyFunc;
 import org.openqa.selenium.WebDriver;

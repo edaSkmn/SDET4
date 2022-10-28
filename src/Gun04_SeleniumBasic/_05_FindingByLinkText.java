@@ -1,4 +1,4 @@
-package Gun04;
+package Gun04_SeleniumBasic;
 
 import Utility.MyFunc;
 import org.openqa.selenium.By;
@@ -21,6 +21,11 @@ public class _05_FindingByLinkText {
         System.out.println("link.getAttribute(href) = " + link.getAttribute("href"));
         System.out.println("link.getAttribute(title) = " + link.getAttribute("title"));
         System.out.println("link.getAttribute(rel) = " + link.getAttribute("rel"));
+
+        WebElement link2= driver.findElement(By.partialLinkText("Süper Fiyat"));  // Linkin gorunen textinin bir kismi ile bulma yontemidir
+        // sadece a TAGleri icin ozel locator bulma yontemi
+        System.out.println("link2.getText() = " + link2.getText());
+
 
         MyFunc.bekle(10);
         driver.quit();
