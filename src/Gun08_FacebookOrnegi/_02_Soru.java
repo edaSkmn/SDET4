@@ -1,4 +1,4 @@
-package Gun08;
+package Gun08_FacebookOrnegi;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
@@ -7,6 +7,8 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 public class _02_Soru extends BaseDriver {
 
@@ -39,14 +41,21 @@ public class _02_Soru extends BaseDriver {
         WebElement lastname=driver.findElement(By.name("lastname"));
         lastname.sendKeys("martin");
 
+        //1.yontem // [id='reg_form_box'] > [class='hidden_elem']  - elemani direkt aliyoruz- direct webElmenet arandi, class ozelligi ile
+        //gorunmediginin kontrol edilecegi yer
+        List<WebElement> secondEmail=driver.findElements(By.cssSelector("[id='reg_form_box'] > [class='hidden_elem']"));
+        Assert.assertTrue("2.email su an gozukuyor mu",(secondEmail.size()==1));
+
         MyFunc.bekle(1);
         WebElement email=driver.findElement(By.name("reg_email__"));
         email.sendKeys("kmar@hotmail.com");
 
+        secondEmail=driver.findElements(By.cssSelector("[id='reg_form_box'] > [class='hidden_elem']"));
+        Assert.assertTrue("2.email su an gozukuyor mu",(secondEmail.size()==0));
 
-//        MyFunc.bekle(1);
-//        WebElement emailDogrulama=driver.findElement(By.id("u_2_j_L5"));
-//        emailDogrulama.sendKeys("kmar@hotmail.com");
+        MyFunc.bekle(1);
+        WebElement email2=driver.findElement(By.name("reg_email_confirmation__")); //2.emaili girdik
+        email2.sendKeys("kmar@hotmail.com");
 
         MyFunc.bekle(1);
         WebElement password=driver.findElement(By.id("password_step_input"));
@@ -64,9 +73,6 @@ public class _02_Soru extends BaseDriver {
         Select year=new Select(selectMenu3);
         year.selectByValue("2000");
 
-        WebElement emailConfirmation=driver.findElement(By.name("reg_email_confirmation__"));
-        emailConfirmation.sendKeys("kmar@hotmail.com");
-        Assert.assertTrue("there is no email confirmation box",emailConfirmation.getText().contains("kmar@hotmail.com"));
 
         driverBekleKapat();
 

@@ -1,4 +1,4 @@
-package Gun08;
+package Gun08_FacebookOrnegi;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;

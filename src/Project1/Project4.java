@@ -112,7 +112,7 @@ public class Project4 extends BaseDriver {
         MyFunc.bekle(1);
 
         WebElement mesajDogrulama=driver.findElement(By.xpath("//p[text()='Listelenecek mesaj bulunamadı.']"));
-        Assert.assertTrue("Mesajiniz bulunmaktadir",mesajDogrulama.getText().contains("Listelenecek mesaj bulunamadı."));
+        Assert.assertTrue("1 adet mesajiniz bulunmaktadir",mesajDogrulama.getText().contains("Listelenecek mesaj bulunamadı."));
 
         WebElement anasayfa=driver.findElement(By.linkText("Akakce.com"));
         anasayfa.click();
