@@ -1,4 +1,4 @@
-package Gun13_Scroll_Robot;
+package Gun14;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
@@ -11,9 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.awt.*;
 import java.time.Duration;
-import java.time.Instant;
 
-public class _05_RobotFileUpload2 extends BaseDriver {
+public class _01_RobotFileUpload2 extends BaseDriver {
     @Test
     public void Test1() throws AWTException {
         driver.get("http://demo.guru99.com/test/upload/");
