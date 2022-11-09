@@ -6,6 +6,10 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class _03_ScrollToWebElement extends BaseDriver {
 
@@ -21,8 +25,13 @@ public class _03_ScrollToWebElement extends BaseDriver {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
 
         MyFunc.bekle(3);
-        js.executeScript("arguments[0].click();", element);
-        // TODO : element.click();
+        // js.executeScript("arguments[0].click();", element); 1. yontem
+
+        //2.yontem
+        js.executeScript("window.scrollBy(0,-500);"); // sayfanin kaydirma sonrasi tekrar yuklenmesini tetiklemis olduk
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        element.click();
 
         MyFunc.bekle(3);
         driverBekleKapat();
