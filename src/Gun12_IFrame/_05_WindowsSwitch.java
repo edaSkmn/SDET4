@@ -47,7 +47,7 @@ public class _05_WindowsSwitch extends BaseDriver {
         //sonra ana sayfa harici diğerlerini kapatalım.
         for (String id : windowIdler) {
             if (id.equals(anaSayfaWindowID))
-                continue; // sadece bu adımı pass geçti, kendin sonra gelenleri çalıştırmadı
+                continue; // sadece bu adımı pass geçti, kendinden sonra gelenleri çalıştırmadı
 
             driver.switchTo().window(id);
             driver.close(); // sadece bulunduğum wındow u kapatır
