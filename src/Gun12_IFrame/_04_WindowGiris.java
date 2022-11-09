@@ -1,4 +1,4 @@
-package Gun12;
+package Gun12_IFrame;
 
 import Utility.BaseDriver;
 import org.junit.Test;
@@ -23,6 +23,7 @@ public class _04_WindowGiris extends BaseDriver {
         Set<String> windowIdler=driver.getWindowHandles(); // acik olan tum sayfalarin windowId bilgilerini aldik
         for (String id : windowIdler)
             System.out.println("id = " + id);
+
         driverBekleKapat();
     }
 }

@@ -1,4 +1,4 @@
-package Gun12;
+package Gun12_IFrame;
 
 import Utility.BaseDriver;
 import org.junit.Test;

@@ -1,10 +1,8 @@
-package Gun12;
+package Gun12_IFrame;
 
 import Utility.BaseDriver;
-import Utility.MyFunc;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class _01_IFrameGiris extends BaseDriver {
