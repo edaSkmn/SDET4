@@ -1,4 +1,4 @@
-package Gun14;
+package Gun14_EkranKaydet;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
