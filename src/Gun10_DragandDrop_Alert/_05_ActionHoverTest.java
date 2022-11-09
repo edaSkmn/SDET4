@@ -1,4 +1,4 @@
-package Gun10;
+package Gun10_DragandDrop_Alert;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
@@ -6,7 +6,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;

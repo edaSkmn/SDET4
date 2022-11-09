@@ -1,4 +1,4 @@
-package Gun10;
+package Gun10_DragandDrop_Alert;
 
 public class _02_Soru {
 

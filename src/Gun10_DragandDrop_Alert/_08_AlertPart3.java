@@ -1,4 +1,4 @@
-package Gun10;
+package Gun10_DragandDrop_Alert;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
