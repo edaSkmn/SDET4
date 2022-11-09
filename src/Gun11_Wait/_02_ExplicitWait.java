@@ -12,9 +12,11 @@ import java.time.Duration;
 /*
     İnterview Sorusu :  Implicit ve Explicit
     Implicitly  : Bütün elemanlar için geçerli,Bir kere tanımlanır.
+
     Explicit    : Tek bir eleman özel Kriter olarak tanımlanır sadece ilgili elemanda geçerli olur
     Her ikisi tanımlı ise : önce Implicit kullanılır, ve üzerine Explicit in süresi eklenerek
                             toplam hata sınır süresi ortaya çıkmış olur.
+
                           ExpectedConditions
                                      .titleIs -> title bu olana kadar bekle
                                      .titleContains -> title ın da bu kelime geçene kadar bekle

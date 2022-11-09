@@ -3,10 +3,12 @@ package Gun11_Wait;
 /*
     Selenium Bekletme Konusu
     Thread.Sleep : bu selenium a özel değil, java ya ait yazılımın herhangi bir yerinde verilen süre kadar bekler.
+
     Implicitly Wait :
     Tüm sayfadaki elemanlar için bir bekleme süresi atanıyor.Ancak eleman bulunduğu anda daha fazla beklemiyor.
     Bütüm elemanlar için geçerli.NoSuchElement hatası nı vermek için verilen süre kadar,  eleman bulunana kadar bekler.
       driver.manage().timeouts().implicitlyWait(dr);
+
     pageLoadTimeout :
       driver.manage().timeouts().pageLoadTimeout(dr);
       30 sn süresinde sayfanın yüklenmesini bekliyor, bu süreden sonra timeout düşerek hata verir.
