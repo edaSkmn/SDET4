@@ -1,4 +1,4 @@
-package Project1;
+package Proje_1;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class Project4 extends BaseDriver {
+public class Proje1 extends BaseDriver {
 
     @Test
     public void Test1(){
