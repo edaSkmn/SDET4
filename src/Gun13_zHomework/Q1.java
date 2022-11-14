@@ -52,52 +52,52 @@ public class Q1 extends BaseDriver {
 
 
         //Substract
-//
-//        driver.findElement(By.cssSelector("[id='number1Field']")).sendKeys(""+sayi1());
-//
-//        driver.findElement(By.cssSelector("[id='number2Field']")).sendKeys(""+sayi2());
-//
-//        WebElement operation2 = driver.findElement(By.cssSelector("[id='selectOperationDropdown']"));
-//        new Select(operation2).selectByValue("1");
-//
-//        WebElement calculation2 = driver.findElement(By.cssSelector("[id='calculateButton']"));
-//        calculation2.click();
-//
-//        //Multiply
-//
-//        driver.findElement(By.cssSelector("[id='number1Field']")).sendKeys(""+sayi1());
-//
-//        driver.findElement(By.cssSelector("[id='number2Field']")).sendKeys(""+sayi2());
-//
-//        WebElement operation3 = driver.findElement(By.cssSelector("[id='selectOperationDropdown']"));
-//        new Select(operation3).selectByValue("2");
-//
-//        WebElement calculation3 = driver.findElement(By.cssSelector("[id='calculateButton']"));
-//        calculation3.click();
-//
-//        //Divide
-//
-//        driver.findElement(By.cssSelector("[id='number1Field']")).sendKeys(""+sayi1());
-//
-//        driver.findElement(By.cssSelector("[id='number2Field']")).sendKeys(""+sayi2());
-//
-//        WebElement operation4 = driver.findElement(By.cssSelector("[id='selectOperationDropdown']"));
-//        new Select(operation4).selectByValue("3");
-//
-//        WebElement calculation4 = driver.findElement(By.cssSelector("[id='calculateButton']"));
-//        calculation4.click();
-//
-//        //Concatenate
-//
-//        driver.findElement(By.cssSelector("[id='number1Field']")).sendKeys(""+sayi1());
-//
-//        driver.findElement(By.cssSelector("[id='number2Field']")).sendKeys(""+sayi2());
-//
-//        WebElement operation5 = driver.findElement(By.cssSelector("[id='selectOperationDropdown']"));
-//        new Select(operation5).selectByValue("4");
-//
-//        WebElement calculation5 = driver.findElement(By.cssSelector("[id='calculateButton']"));
-//        calculation5.click();
+
+        driver.findElement(By.cssSelector("[id='number1Field']")).sendKeys(""+sayi1());
+
+        driver.findElement(By.cssSelector("[id='number2Field']")).sendKeys(""+sayi2());
+
+        WebElement operation2 = driver.findElement(By.cssSelector("[id='selectOperationDropdown']"));
+        new Select(operation2).selectByValue("1");
+
+        WebElement calculation2 = driver.findElement(By.cssSelector("[id='calculateButton']"));
+        calculation2.click();
+
+        //Multiply
+
+        driver.findElement(By.cssSelector("[id='number1Field']")).sendKeys(""+sayi1());
+
+        driver.findElement(By.cssSelector("[id='number2Field']")).sendKeys(""+sayi2());
+
+        WebElement operation3 = driver.findElement(By.cssSelector("[id='selectOperationDropdown']"));
+        new Select(operation3).selectByValue("2");
+
+        WebElement calculation3 = driver.findElement(By.cssSelector("[id='calculateButton']"));
+        calculation3.click();
+
+        //Divide
+
+        driver.findElement(By.cssSelector("[id='number1Field']")).sendKeys(""+sayi1());
+
+        driver.findElement(By.cssSelector("[id='number2Field']")).sendKeys(""+sayi2());
+
+        WebElement operation4 = driver.findElement(By.cssSelector("[id='selectOperationDropdown']"));
+        new Select(operation4).selectByValue("3");
+
+        WebElement calculation4 = driver.findElement(By.cssSelector("[id='calculateButton']"));
+        calculation4.click();
+
+        //Concatenate
+
+        driver.findElement(By.cssSelector("[id='number1Field']")).sendKeys(""+sayi1());
+
+        driver.findElement(By.cssSelector("[id='number2Field']")).sendKeys(""+sayi2());
+
+        WebElement operation5 = driver.findElement(By.cssSelector("[id='selectOperationDropdown']"));
+        new Select(operation5).selectByValue("4");
+
+        WebElement calculation5 = driver.findElement(By.cssSelector("[id='calculateButton']"));
+        calculation5.click();
 
         driverBekleKapat();
     }
@@ -112,3 +112,82 @@ public class Q1 extends BaseDriver {
     }
 
 }
+//        COZUM-2
+//        driver.get("https://testsheepnz.github.io/BasicCalculator.html");
+//
+//                WebElement number1Field = driver.findElement(By.id("number1Field"));
+//                WebElement number2Field = driver.findElement(By.id("number2Field"));
+//                WebElement selectOperation=driver.findElement(By.id("selectOperationDropdown"));
+//                Select selectMenu=new Select(selectOperation);
+//                WebElement button= driver.findElement(By.id("calculateButton"));
+//                WebElement answer=driver.findElement(By.xpath("//label[text()='Answer']"));
+//                WebElement answerBox= driver.findElement(By.id("numberAnswerField"));
+//                WebElement clear=driver.findElement(By.id("clearButton"));
+//
+//                js.executeScript("arguments[0].scrollIntoView(true);", number1Field);
+//
+//                for (int i=0;i<5;i++) {
+//        int result=0;
+//        String strResult;
+//        int number1 = (int) ((Math.random() * 100)+1);
+//        int number2 = (int) ((Math.random() * 100)+1);
+//        String num1=Integer.toString(number1);
+//        String num2=Integer.toString(number2);
+//
+//        number1Field.sendKeys(num1);
+//        number2Field.sendKeys(num2);
+//        String value=Integer.toString(i);
+//        selectMenu.selectByValue(value);
+//        button.click();
+//
+//        switch (i){
+//        case 0: result=(number1+number2);
+//        strResult=Integer.toString(result);
+//        wait.until(ExpectedConditions.visibilityOf(answer));
+//        bekle(1);
+//        Assert.assertTrue(answer.isDisplayed());
+//        Assert.assertEquals(answerBox.getAttribute("value"), strResult);
+//        System.out.println("answerBox = " + answerBox.getAttribute("value"));
+//
+//        break;
+//        case 1:result=(number1-number2);
+//        strResult=Integer.toString(result);
+//        wait.until(ExpectedConditions.visibilityOf(answer));
+//        Assert.assertEquals(answerBox.getAttribute("value"), strResult);
+//        bekle(1);
+//        Assert.assertTrue(answer.isDisplayed());
+//        System.out.println("answerBox = " + answerBox.getAttribute("value"));
+//
+//        break;
+//        case 2:result=(number1*number2);
+//        wait.until(ExpectedConditions.visibilityOf(answer));
+//        bekle(1);
+//        strResult=Integer.toString(result);
+//        Assert.assertTrue(answer.isDisplayed());
+//        Assert.assertEquals(answerBox.getAttribute("value"), strResult);
+//        System.out.println("answerBox = " + answerBox.getAttribute("value"));
+//
+//        break;
+//        case 3:result=(number1/number2);
+//        wait.until(ExpectedConditions.visibilityOf(answer));
+//        bekle(1);
+//        strResult=Integer.toString(result);
+//        Assert.assertTrue(answer.isDisplayed());
+//        System.out.println("answerBox = " + answerBox.getAttribute("value"));
+//
+//        break;
+//        case 4:
+//        strResult=num1+num2;
+//        wait.until(ExpectedConditions.visibilityOf(answer));
+//        bekle(1);
+//        Assert.assertTrue(answer.isDisplayed());
+//        Assert.assertEquals(answerBox.getAttribute("value"), strResult);
+//        System.out.println("answerBox = " + answerBox.getAttribute("value"));
+//
+//        break;
+//
+//        }
+//        bekle(1);
+//        clear.click();
+//        number1Field.clear();
+//        number2Field.clear();

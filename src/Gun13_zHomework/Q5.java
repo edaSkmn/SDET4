@@ -22,13 +22,17 @@ public class Q5 extends BaseDriver {
 
         driver.get("https://demoqa.com/dynamic-properties");
 
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("visibleAfter")));
 
         WebElement enablebutton=driver.findElement(By.id("enableAfter"));
         Assert.assertTrue("button is unable",enablebutton.isEnabled());
 
         driverBekleKapat();
-
     }
 }
+//         COZUM - 2
+//  driver.get("https://demoqa.com/dynamic-properties");
+//
+//        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("enableAfter"))));
+//        WebElement button= driver.findElement(By.id("enableAfter"));
+//        Assert.assertTrue("button is not clickable",button.isEnabled());

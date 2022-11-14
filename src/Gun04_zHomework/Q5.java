@@ -26,6 +26,13 @@ public class Q5 {
         MyFunc.bekle(1);
         submitButton2.click();
 
+        try {
+            submitButton2.click();
+            System.out.println("Test failed");
+        } catch (Exception a) {
+            System.out.println("Test passed");
+        }
+
         MyFunc.bekle(10);
         driver.quit();
     }

@@ -5,36 +5,40 @@ package Gun13_zHomework;
 //4- Son videonun title ını yazdırınız.
 
 import Utility.BaseDriver;
-import org.junit.Test;
+import Utility.MyFunc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.time.Duration;
+import org.junit.Test;
+import java.util.List;
 
 public class Q2 extends BaseDriver {
-    public static void main(String[] args) throws AWTException {
+    public static void main(String[] args) {
 
         driver.get("https://www.youtube.com/");
+        // WebElement accept= driver.findElement(By.xpath("(//*[@class='yt-spec-touch-feedback-shape__fill'])[11] "));
+        // accept.click();
 
+        MyFunc.bekle(2);
         WebElement search=driver.findElement(By.cssSelector("input[id='search']"));
         search.sendKeys("Selenium");
-        Robot rbt=new Robot();
-        rbt.keyPress(KeyEvent.VK_ENTER);
-        rbt.keyRelease(KeyEvent.VK_ENTER);
+        search.sendKeys(Keys.ENTER);
 
-        JavascriptExecutor js=(JavascriptExecutor) driver;
-        WebElement video1=driver.findElement(By.cssSelector("a[title='Selenium Interview Questions and Answers'] > yt-formatted-string[class='style-scope ytd-video-renderer']"));
+        wait.until(ExpectedConditions.urlContains("Selenium"));
+        List<WebElement> videoList =driver.findElements(By.cssSelector("h3[class*='style-scope']>[id='video-title']"));
 
-        js.executeScript("window.scrollBy(0,15);");
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(video1));
-//        js.executeScript("window.scrollTo(0, 5);");
-      //  js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+        do {
+            videoList= driver.findElements(By.cssSelector("h3[class*='style-scope']>[id='video-title']"));
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("window.scrollBy(0,1000)");
+
+        }while (videoList.size()<80);
+
+        System.out.println("videoList.size() = " + videoList.size());
+        System.out.println(videoList.get(79).getText());
+        driverBekleKapat();
 
     }
 }

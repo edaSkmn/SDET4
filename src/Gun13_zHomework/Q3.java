@@ -32,25 +32,24 @@ public class Q3 extends BaseDriver {
         driver.switchTo().window(tabs.get(1));
         driver.get("https://www.facebook.com/");
 
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(65));
-        wait.until(ExpectedConditions.urlToBe("https://www.facebook.com/"));
-        Assert.assertTrue(driver.getCurrentUrl().equals("https://www.facebook.com/"));
-
+        Assert.assertTrue(driver.getCurrentUrl().contains("facebook"));
 
         driver.close();
 
     }
 
 }
-//        Robot rbt = new Robot();
-//        rbt.keyPress(KeyEvent.VK_CONTROL);
-//        rbt.keyPress(KeyEvent.VK_T);
+//                COZUM-2
+// driver.get("https://www.google.com/");
+//        robot.keyPress(KeyEvent.VK_CONTROL);
+//        robot.keyPress(KeyEvent.VK_T);
+//        robot.keyRelease(KeyEvent.VK_CONTROL);
+//        robot.keyRelease(KeyEvent.VK_T);
 //
-//        rbt.keyRelease(KeyEvent.VK_CONTROL);
-//        rbt.keyRelease(KeyEvent.VK_T);
-
-//        To switch to the new tab
-//        ArrayList<String> tabs = new ArrayList<String>(drive.getWindowHandles());
-//        drive.switchTo().window(tabs.get(1));
-//       To navigate to new link/URL in 2nd new tab
-//       drive.get("http://facebook.com");
+//        List<String> windows= new ArrayList<>(driver.getWindowHandles());
+//        driver.switchTo().window(windows.get(1));
+//        driver.get("https://www.facebook.com/");
+//
+//        Assert.assertTrue(driver.getCurrentUrl().contains("facebook"));
+//        bekle(2);
+//        driver.close();

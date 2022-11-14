@@ -30,15 +30,15 @@ public class Q4 extends BaseDriver {
         WebElement clickMe=driver.findElement(By.id("timerAlertButton"));
         clickMe.click();
 
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.alertIsPresent());
 
-        driver.switchTo().alert().getText();
+        String alertText= driver.switchTo().alert().getText();
 
-//        WebElement text=driver.findElement(By.partialLinkText("This alert appeared after 5 seconds"));
-      //  Assert.assertTrue("text is wrong",alert.contains("This alert appeared after 5 seconds"));
+        Assert.assertEquals("This alert appeared after 5 seconds",alertText);
 
         driver.switchTo().alert().accept();
+        System.out.println("alertText = " + alertText);
+        driverBekleKapat();
 
     }
 

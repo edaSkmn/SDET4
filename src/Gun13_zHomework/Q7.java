@@ -27,7 +27,6 @@ public class Q7 extends BaseDriver {
         WebElement addElement=driver.findElement(By.cssSelector("[onclick='addElement()']"));
         addElement.click();
 
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[onclick='deleteElement()']")));
 
         WebElement deleteConfirm=driver.findElement(By.cssSelector("[onclick='deleteElement()']"));
@@ -41,3 +40,25 @@ public class Q7 extends BaseDriver {
         driverBekleKapat();
     }
 }
+
+//               COZUM - 2
+/*
+        driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
+        WebElement addElement= driver.findElement(By.cssSelector("button[onclick='addElement()']"));
+        addElement.click();
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("button[onclick='deleteElement()']"))));
+
+        WebElement delete=driver.findElement(By.cssSelector("button[onclick='deleteElement()']"));
+        List<WebElement>list= driver.findElements(By.cssSelector("button[onclick='deleteElement()']"));
+        System.out.println("list.size() = " + list.size());
+        Assert.assertTrue(list.size()>0);
+
+        delete.click();
+        wait.until(ExpectedConditions.invisibilityOf(delete));
+        list= driver.findElements(By.cssSelector("button[onclick='deleteElement()']"));
+        System.out.println("list.size() = " + list.size());
+
+        Assert.assertEquals("delete is displayed", 0, list.size());
+
+ */
